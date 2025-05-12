@@ -66,7 +66,7 @@
 &kp TAB     &kp A      &kp S    &kp D    &kp F      &kp G         &kp C_NEXT       &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
 &kp LSHFT   &kp Z      &kp X    &kp C    &kp V      &kp B         &kp C_PREV       &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
                                                                   &none
-            &kp LCTRL  &kp LALT &kp LGUI &mo LOWER  &kp SPACE     &kp C_MUTE       &kp SPACE &kp ENTER &mo RAISE &kp RCTRL &kp RALT
+            &kp LCTRL  &kp LALT &kp LGUI &mo LOWER  &kp SPACE     &kp C_MUTE       &kp SPACE &kp ENTER &mo RAISE &kp RSHFT &kp RALT
             >;
         };
 
@@ -76,7 +76,7 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |               | ^ |            |      |       |       |      |       |       |
-// |       |  F1 |  F2 |  F3  |  F4  |  F5  |               | ^ |            |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
+// |       |  F1 |  F2 |  F3  |  F4  |  F5  |               | v |            |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |       |  !  |  @  |  #   |  $   |  %   |               | > |            |  ^   |  &    |  *    |  (   |   )   |   |   |
 // |       |  =  |  -  |  +   |  {   |  }   |               | < |            |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |               | o |            |      |       |       |      |
@@ -95,17 +95,17 @@
             sensor-bindings = <&scroll_encoder &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 // ------------------------------------------------------------------------------------------------------------
 // |     |            |           |            |            |      |      | ^ |               |             |        |        |          |       |       |
-// |     | INS        | PSCR      |            |            |      |      | v |               | PGUP        |        |   ^    |          |       |       |
-// |     | ALT        | CTRL      | SHIFT      | GUI        | CAPS |      | > |               | PGDN        |     <- |   v    |    ->    |  DEL  | BKSPC |
+// |     | INS        | PSCR      |            |            |      |      | v |               | PGUP        |        |   ^    |          | BKSPC |       |
+// |     | CTRL       | ALT       | SHIFT      | GUI        | CAPS |      | > |               | PGDN        |     <- |   v    |    ->    |  DEL  |       |
 // |     | UNDO       | CUT       | COPY       | PASTE      |      |      | < |               |             |        |        |          |       |       |
 //                    |           |            |            |      |      | o |               |             |        |        |          |
             bindings = <   
-&trans   &trans       &trans       &trans       &trans       &trans           &trans           &trans        &trans    &trans   &trans     &trans   &trans
-&trans   &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans           &trans           &kp PG_UP     &trans    &kp UP   &trans     &kp N0   &trans
-&trans   &kp LALT     &kp LCTRL    &kp LSHFT    &kp RGUI     &kp CLCK         &trans           &kp PG_DN     &kp LEFT  &kp DOWN &kp RIGHT  &kp DEL  &kp BSPC
-&trans   &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans           &trans           &trans        &trans    &trans   &trans     &trans   &trans
-                                                                              &none
-         &trans       &trans       &trans       &trans       &trans           &trans           &trans        &trans    &trans   &trans     &trans
+&none   &none        &none        &none        &none        &none           &none           &none         &none     &none    &none     &none    &none
+&none   &kp INS      &kp PSCRN    &kp K_CMENU  &none        &none           &none           &kp PG_UP     &none     &kp UP   &none     &kp BSPC &none
+&none   &kp LCTRL    &kp LALT     &kp LSHFT    &kp RGUI     &kp CLCK        &none           &kp PG_DN     &kp LEFT  &kp DOWN &kp RIGHT &kp DEL  &none
+&none   &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &none           &none           &none         &none     &none    &none     &none    &none
+                                                                            &none
+         &trans       &trans       &trans       &trans       &trans         &trans          &trans        &trans    &trans   &trans     &trans
             >;
         };
 
