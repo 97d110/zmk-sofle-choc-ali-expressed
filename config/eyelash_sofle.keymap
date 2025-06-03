@@ -103,9 +103,9 @@
 &trans  &kp F13          &kp F14       &kp F15       &kp F16          &kp F17        &none           &kp F18       &kp F19   &kp F20  &kp F21   &kp F22  &trans
 &trans  &kp INS          &kp PSCRN     &kp K_CMENU   &kp GRAVE        &none          &none           &kp PG_UP     &kp BSPC  &kp UP   &kp DEL   &none    &none
 &trans  &kp LCTRL        &kp LALT      &kp LSHFT     &kp RGUI         &kp CLCK       &none           &kp PG_DN     &kp LEFT  &kp DOWN &kp RIGHT &none    &none
-&trans  &kp C_AC_UNDO    &kp C_AC_CUT  &kp C_AC_COPY &kp C_AC_PASTE   &kp F26        &none           &kp F27       &kp F28   &kp F29  &kp F30   &kp F31
-                                                                           &none
-        &trans       &trans       &trans       &trans       &trans         &trans          &trans        &trans    &trans   &trans    &trans
+&trans  &kp C_AC_UNDO    &kp C_AC_CUT  &kp C_AC_COPY &kp C_AC_PASTE   &kp F26        &none           &kp F27       &kp F28   &kp F29  &kp F30   &kp F31  &none
+                                                                                     &none
+        &trans           &trans        &trans        &trans           &trans         &trans          &trans        &trans    &trans   &trans    &trans
             >;
         };
 
