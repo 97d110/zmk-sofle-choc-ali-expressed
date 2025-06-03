@@ -77,8 +77,8 @@
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |               | ^ |            |      |       |       |      |       |       |
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |               | v |            |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// |       |  !  |  @  |  #   |  $   |  %   |               | > |            |  ^   |  &    |  *    |  (   |   )   |   |   |
-// |       |  =  |  -  |  +   |  {   |  }   |               | < |            |  [   |  ]    |  ;    |  :   |   \   |       |
+// |       |  !  |  @  |  #   |  $   |  %   |               | > |            |  ^   |  &    |  *    |  (   |   )   |  F12  |
+// |       |  =  |  -  |  +   |  {   |  }   |               | < |            |  [   |  ]    |  ;    |  :   |   \   |   |   |
 //               |     |      |      |      |               | o |            |      |       |       |      |
             bindings = <
 &trans    &trans    &trans    &trans      &trans    &trans       &trans      &trans    &trans   &trans    &trans    &trans    &trans
@@ -94,7 +94,7 @@
             display-name = "Mod";
             sensor-bindings = <&scroll_encoder &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 // ------------------------------------------------------------------------------------------------------------
-// |     |            |           |                 |                |      |        | ^ |          |            |        |        |       |       |       |
+// |     | F13        | F14       | F15             |    F16         | F17  |        | ^ |          |    F18     | F19    |  F20   |  F21  |  F22  |       |
 // |     | INS        | PSCR      |                 |     `          |      |        | v |          |    PGUP    | BKSPC  |   ^    |  DEL  |       |       |
 // |     | CTRL       | ALT       | SHIFT           |    GUI         | CAPS |        | > |          |    PGDN    |     <- |   v    |   ->  |       |       |
 // |     | UNDO       | CUT       | COPY            |    PASTE       |      |        | < |          |            |        |        |       |       |       |
@@ -113,18 +113,18 @@
             display-name = "Config";
             sensor-bindings = <&scroll_encoder &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 // ----------------------------------------------------------------------------------------------------------------------------
-// | BTCLR  |  BT1    |  BT2    |   BT3      |   BT4   |   BT5   |                                    | ^ |              |      |      |       |      |       |       |
-// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD    | RGB_SAI | RGB_EFF |                                    | v |              |      |      |       |      |       |       |
-// |        | RGB_BRD | RGB_BRI | RGB Toggle |         |         |                                    | > |              |      |      |       |      |       |       |
-// |        |         |         |            |         |         |                                    | < |              |      |      |       |      |       |       |
-//          |         |         |            |         |         |                                    | o |              |      |      |       |      |       |
-            bindings = <
-&bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4     &none              &none   &none  &none   &none   &none   &none
-&none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG &none           &none            &none              &none   &none  &none   &none   &none   &none
-&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF  &none              &none   &none  &none   &none   &none   &none
-&none             &none           &none           &none           &none           &none            &none              &none   &none  &none   &none   &none   &none
-                                                                                                   &none
-                  &none           &none           &none           &none           &none            &none              &none   &none  &none   &none   &none   
+// |   BTCLR    |   BT1         |      BT2       |     BT3         |     BT4       |     BT5    |  | ^ | RGB_BRI   |      |      |       |      |       |       |
+// |            |               |                |  EXTPWR         |  RGB Toggle   |            |  | v | RGB_BRD   |      |      |       |      |       |       |
+// |            |               |                |  RGB_HUD        |  RGB_HUI      |            |  | > | RGB_SAD   |      |      |       |      |       |       |
+// |            |               |                |                 |               |            |  | < | RGB_SAI   |      |      |       |      |       |       |
+//              |               |                |                 |               |            |  | o | RGB_EFF   |      |      |       |      |       |
+            bindings = 
+&bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4    &rgb_ug RGB_BRI  &none   &none  &none   &none   &none   &none
+&none             &none           &none           &ext_power EP_TOG &rgb_ug RGB_TOG &none           &rgb_ug RGB_BRD  &none   &none  &none   &none   &none   &none
+&none             &none           &none           &rgb_ug RGB_HUD   &rgb_ug RGB_HUI &none           &rgb_ug RGB_SAD  &none   &none  &none   &none   &none   &none
+&none             &none           &none           &none             &none           &none           &rgb_ug RGB_SAI  &none   &none  &none   &none   &none   &none
+                                                                                                    &none   
+                  &none           &none           &none             &none           &none           &rgb_ug RGB_EFF  &none   &none  &none   &none   &none   
             >;
         };
 
