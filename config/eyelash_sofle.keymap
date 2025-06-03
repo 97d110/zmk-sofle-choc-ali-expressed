@@ -94,16 +94,16 @@
             display-name = "Mod";
             sensor-bindings = <&scroll_encoder &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 // ------------------------------------------------------------------------------------------------------------
-// |     | F13        | F14       | F15             |    F16         | F17  |        | ^ |          |    F18     | F19    |  F20   |  F21  |  F22  |       |
+// |     | F13        | F14       | F15             |    F16         | F17  |        | ^ |          |    F18     | F19    |        |       |       |       |
 // |     | INS        | PSCR      |                 |     `          |      |        | v |          |    PGUP    | BKSPC  |   ^    |  DEL  |       |       |
 // |     | CTRL       | ALT       | SHIFT           |    GUI         | CAPS |        | > |          |    PGDN    |     <- |   v    |   ->  |       |       |
-// |     | UNDO       | CUT       | COPY            |    PASTE       | 23   |        | < |          |    F24     |        |        |       |       |       |
+// |     | F20        | F21       | F22             |    F23         | F24  |        | < |          |    F24     |        |        |       |       |       |
 //                    |           |                 |                |      |        | o |          |            |        |        |       |
             bindings = <   
-&trans  &kp F13          &kp F14       &kp F15       &kp F16          &kp F17        &none           &kp F18       &kp F19   &kp F20  &kp F21   &kp F22  &trans
+&trans  &kp F13          &kp F14       &kp F15       &kp F16          &kp F17        &none           &kp F18       &kp F19   &none    &none     &none    &trans
 &trans  &kp INS          &kp PSCRN     &kp K_CMENU   &kp GRAVE        &none          &none           &kp PG_UP     &kp BSPC  &kp UP   &kp DEL   &none    &none
 &trans  &kp LCTRL        &kp LALT      &kp LSHFT     &kp RGUI         &kp CLCK       &none           &kp PG_DN     &kp LEFT  &kp DOWN &kp RIGHT &none    &none
-&trans  &kp C_AC_UNDO    &kp C_AC_CUT  &kp C_AC_COPY &kp C_AC_PASTE   &kp F23        &none           &kp F24       &none     &none    &none     &none    &none
+&trans  &kp F20          &kp F21       &kp F22       &kp F23          &kp F24        &none           &none         &none     &none    &none     &none    &none
                                                                                      &none
         &trans           &trans        &trans        &trans           &trans         &trans          &trans        &trans    &trans   &trans    &trans
             >;
